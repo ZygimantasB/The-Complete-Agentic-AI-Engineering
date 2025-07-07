@@ -1,7 +1,7 @@
 # Extensions
 
 *.xml
-
+.env
 .cadence
 .qodo
 
