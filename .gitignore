@@ -4,6 +4,7 @@
 .env
 .cadence
 .qodo
+*.iml
 
 ### venv template
 # Virtualenv
