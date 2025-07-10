@@ -5,6 +5,7 @@
 .cadence
 .qodo
 *.iml
+/agents/1_foundations/me/summary_me.txt
 
 ### venv template
 # Virtualenv
@@ -508,3 +509,4 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
+/agents/1_foundations/me/summary_me.txt
