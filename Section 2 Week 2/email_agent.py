@@ -3,13 +3,23 @@ import base64
 from email.mime.text import MIMEText
 from typing import Dict
 from decouple import config
+from dotenv import load_dotenv
+from openai import AsyncOpenAI
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-from agents import Agent, function_tool
+from agents import Agent, function_tool, OpenAIChatCompletionsModel
+
+load_dotenv(override=True)
+
+# Gemini setup
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+google_api_key = os.getenv("GOOGLE_API_KEY")
+gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
+gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash", openai_client=gemini_client)
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
@@ -108,7 +118,7 @@ email_agent = Agent(
     name="Email agent",
     instructions=INSTRUCTIONS,
     tools=[send_email],
-    model="gpt-4o-mini",
+    model=gemini_model,
 )
 
 

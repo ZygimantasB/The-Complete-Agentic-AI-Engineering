@@ -1,4 +1,15 @@
-from agents import Agent, WebSearchTool, ModelSettings
+import os
+from openai import AsyncOpenAI
+from agents import Agent, WebSearchTool, ModelSettings, OpenAIChatCompletionsModel
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+# Gemini setup
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+google_api_key = os.getenv("GOOGLE_API_KEY")
+gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
+gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash", openai_client=gemini_client)
 
 INSTRUCTIONS = (
     "You are a research assistant. Given a search term, you search the web for that term and "
@@ -12,6 +23,6 @@ search_agent = Agent(
     name="Search agent",
     instructions=INSTRUCTIONS,
     tools=[WebSearchTool(search_context_size="low")],
-    model="gpt-4o-mini",
+    model=gemini_model,
     model_settings=ModelSettings(tool_choice="required"),
 )
