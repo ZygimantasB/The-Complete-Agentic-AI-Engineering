@@ -5,7 +5,7 @@
 .cadence
 .qodo
 *.iml
-/agents/1_foundations/me/summary_me.txt
+/agents/
 credentials.json
 token.json
 

@@ -5,7 +5,12 @@
       "Bash(python:*)",
       "Bash(ren:*)",
       "Bash(powershell -Command:*)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(git -C \"D:\\\\Programing\\\\The-Complete-Agentic-AI-Engineering\" remote -v)",
+      "Bash(git -C \"D:\\\\Programing\\\\The-Complete-Agentic-AI-Engineering\" log --oneline -10)",
+      "Bash(git clone:*)",
+      "Bash(dir:*)"
     ]
   }
 }
