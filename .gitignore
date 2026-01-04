@@ -6,6 +6,8 @@
 .qodo
 *.iml
 /agents/1_foundations/me/summary_me.txt
+credentials.json
+token.json
 
 ### venv template
 # Virtualenv
