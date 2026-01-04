@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python email_agent.py:*)"
+      "Bash(python email_agent.py:*)",
+      "Bash(python:*)",
+      "Bash(ren:*)",
+      "Bash(powershell -Command:*)"
     ]
   }
 }
