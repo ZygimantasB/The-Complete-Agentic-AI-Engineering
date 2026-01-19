@@ -10,7 +10,9 @@
       "Bash(git -C \"D:\\\\Programing\\\\The-Complete-Agentic-AI-Engineering\" remote -v)",
       "Bash(git -C \"D:\\\\Programing\\\\The-Complete-Agentic-AI-Engineering\" log --oneline -10)",
       "Bash(git clone:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)"
     ]
   }
 }
