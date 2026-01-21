@@ -53,3 +53,4 @@ class Debate():
             process=Process.sequential,
             verbose=True,
         )
+

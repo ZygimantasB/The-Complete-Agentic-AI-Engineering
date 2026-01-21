@@ -12,7 +12,8 @@
       "Bash(git clone:*)",
       "Bash(dir:*)",
       "Bash(git fetch:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(crewai run)"
     ]
   }
 }
